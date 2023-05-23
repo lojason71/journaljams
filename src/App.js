@@ -3,6 +3,9 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { UserProvider } from "./contexts/user.context";
 import Home from "./pages/Home.page";
 import Login from "./pages/Login.page";
+import Friends from './pages_2/Friends';
+import Profile from './pages_2/Profile';
+import MyEntries from './pages_2/index';
 import PrivateRoute from "./pages/PrivateRoute.page";
 import Signup from "./pages/Signup.page";
 // import LoginPage from './login/login'
@@ -23,6 +26,9 @@ function App() {
         {/* users by wrapping it with PrivateRoute here. */}
         <Route element={<PrivateRoute />}>
           <Route exact path="/" element={<Home />} />
+          <Route path='/myentries' element={<MyEntries/>} />
+          <Route path='/profile' element={<Profile/>} />
+          <Route path='/friends' element={<Friends/>} />
         </Route>
       </Routes>
     </UserProvider>
