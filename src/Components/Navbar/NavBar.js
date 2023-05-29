@@ -13,6 +13,9 @@ const Navbar = () => {
   return (
     <>
       <Nav>
+        <NavLink to="/" activeStyle> 
+          Home
+        </NavLink>
         <NavLink to="/MyEntries" activeStyle>
           My Entries
         </NavLink>
